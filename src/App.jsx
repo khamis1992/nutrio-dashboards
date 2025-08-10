@@ -17,6 +17,10 @@ import SystemAnalytics from '@/components/admin/SystemAnalytics'
 import AdminSettings from '@/components/admin/AdminSettings'
 import AdminProfile from '@/components/admin/AdminProfile'
 import AdminNotifications from '@/components/admin/AdminNotifications'
+import RestaurantManagement from '@/components/admin/RestaurantManagement'
+import GymManagement from '@/components/admin/GymManagement'
+import DriversManagement from '@/components/admin/DriversManagement'
+import OrdersOverview from '@/components/admin/OrdersOverview'
 import RestaurantSettings from '@/components/restaurant/RestaurantSettings'
 import RestaurantProfile from '@/components/restaurant/RestaurantProfile'
 import RestaurantNotifications from '@/components/restaurant/RestaurantNotifications'
@@ -41,6 +45,10 @@ function App() {
               <Route path="/" element={<HomePage />} />
               <Route path="/admin" element={<AdminDashboard />} />
               <Route path="/admin/users" element={<UserManagement />} />
+              <Route path="/admin/restaurants" element={<RestaurantManagement />} />
+              <Route path="/admin/gyms" element={<GymManagement />} />
+              <Route path="/admin/drivers" element={<DriversManagement />} />
+              <Route path="/admin/orders" element={<OrdersOverview />} />
               <Route path="/admin/system-health" element={<SystemHealthDashboard />} />
               <Route path="/admin/analytics" element={<SystemAnalytics />} />
               <Route path="/admin/settings" element={<AdminSettings />} />
