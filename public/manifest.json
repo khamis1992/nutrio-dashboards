@@ -1,0 +1,22 @@
+{
+  "name": "Nutrio - نظام إدارة شامل للمطاعم وصالات الجيم",
+  "short_name": "Nutrio",
+  "description": "نظام إدارة شامل للمطاعم وصالات الجيم مع تطبيق PWA للتوصيل",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "orientation": "portrait",
+  "dir": "rtl",
+  "lang": "ar",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ],
+  "categories": ["business", "food", "health"],
+  "screenshots": []
+}
+
