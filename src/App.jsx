@@ -29,6 +29,9 @@ import MemberCheckIn from '@/components/gym/MemberCheckIn'
 import MembersManagement from '@/components/gym/MembersManagement'
 import MemberDetails from '@/components/gym/MemberDetails'
 import ClassesManagement from '@/components/gym/ClassesManagement'
+import MenuManagement from '@/components/restaurant/MenuManagement'
+import AddMenuItem from '@/components/restaurant/AddMenuItem'
+import MenuCategories from '@/components/restaurant/MenuCategories'
 import NotFound from '@/components/NotFound'
 
 function App() {
@@ -50,6 +53,9 @@ function App() {
               <Route path="/restaurant" element={<RestaurantDashboard />} />
               <Route path="/restaurant/orders" element={<RestaurantOrdersManagement />} />
               <Route path="/restaurant/kitchen" element={<KitchenDisplay />} />
+              <Route path="/restaurant/menu" element={<MenuManagement />} />
+              <Route path="/restaurant/menu/add" element={<AddMenuItem />} />
+              <Route path="/restaurant/menu/categories" element={<MenuCategories />} />
               <Route path="/restaurant/settings" element={<RestaurantSettings />} />
               <Route path="/restaurant/profile" element={<RestaurantProfile />} />
               <Route path="/restaurant/notifications" element={<RestaurantNotifications />} />
