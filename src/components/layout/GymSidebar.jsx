@@ -47,6 +47,7 @@ const GymSidebar = ({ isCollapsed, setIsCollapsed }) => {
       key: 'members',
       title: 'إدارة الأعضاء',
       icon: Users,
+      path: '/gym/members',
       submenu: [
         { title: 'جميع الأعضاء', path: '/gym/members' },
         { title: 'إضافة عضو جديد', path: '/gym/members/add' },
@@ -60,6 +61,7 @@ const GymSidebar = ({ isCollapsed, setIsCollapsed }) => {
       key: 'classes',
       title: 'إدارة الحصص',
       icon: Dumbbell,
+      path: '/gym/classes',
       submenu: [
         { title: 'جميع الحصص', path: '/gym/classes' },
         { title: 'إضافة حصة جديدة', path: '/gym/classes/add' },
