@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useReducer, useEffect } from 'react'
+import React, { createContext, useContext, useReducer, useEffect, useCallback } from 'react'
 
 // Initial State
 const initialState = {
@@ -178,7 +178,7 @@ export const AppProvider = ({ children }) => {
   }
 
   // Simulate API calls
-  const fetchStats = async (dashboardType) => {
+  const fetchStats = useCallback(async (dashboardType) => {
     setLoading(true)
     try {
       // Simulate API delay
@@ -199,12 +199,12 @@ export const AppProvider = ({ children }) => {
       }
       
       updateStats(dashboardType, updatedStats)
-    } catch (error) {
+    } catch {
       setError('فشل في تحميل البيانات')
     } finally {
       setLoading(false)
     }
-  }
+  }, [state.stats, updateStats, setLoading, setError])
 
   // Auto-refresh data
   useEffect(() => {
@@ -218,7 +218,7 @@ export const AppProvider = ({ children }) => {
 
       return () => clearInterval(interval)
     }
-  }, [state.settings.autoRefresh, state.userRole])
+  }, [state.settings.autoRefresh, state.userRole, fetchStats])
 
   const value = {
     // State
@@ -261,7 +261,7 @@ export const useAuth = () => {
       
       setUser(userData, role)
       return { success: true }
-    } catch (error) {
+    } catch {
       return { success: false, error: 'فشل في تسجيل الدخول' }
     }
   }

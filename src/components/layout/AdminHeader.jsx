@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { 
   Bell, 
@@ -16,7 +16,10 @@ import {
 const AdminHeader = ({ title, onMenuToggle }) => {
   const [showNotifications, setShowNotifications] = useState(false)
   const [showProfile, setShowProfile] = useState(false)
-  const [isDarkMode, setIsDarkMode] = useState(false)
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    if (typeof window === 'undefined') return false
+    return localStorage.getItem('theme') === 'dark'
+  })
 
   const notifications = [
     { id: 1, title: 'طلب انضمام مطعم جديد', time: 'منذ 5 دقائق', unread: true },
@@ -25,6 +28,16 @@ const AdminHeader = ({ title, onMenuToggle }) => {
   ]
 
   const unreadCount = notifications.filter(n => n.unread).length
+
+  useEffect(() => {
+    if (isDarkMode) {
+      document.documentElement.classList.add('dark')
+      localStorage.setItem('theme', 'dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+      localStorage.setItem('theme', 'light')
+    }
+  }, [isDarkMode])
 
   return (
     <header className="bg-white shadow-sm border-b border-gray-200 px-6 py-4">

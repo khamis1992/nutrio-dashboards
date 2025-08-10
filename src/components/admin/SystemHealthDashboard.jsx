@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { 
   Server, 
   Database, 
@@ -82,7 +82,7 @@ const SystemHealthDashboard = () => {
       
       setLastUpdated(new Date())
       toast.success('تم تحديث بيانات النظام بنجاح')
-    } catch (error) {
+    } catch {
       toast.error('فشل في تحديث بيانات النظام')
     } finally {
       setLoading(false)

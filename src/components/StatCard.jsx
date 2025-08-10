@@ -1,13 +1,13 @@
 import { Card, CardContent } from '@/components/ui/card'
 
-const StatCard = ({ title, value, icon: Icon, color = 'bg-blue-500' }) => {
+const StatCard = ({ title, value, icon: IconElement, color = 'bg-blue-500' }) => {
   return (
     <Card>
       <CardContent className="p-6">
         <div className="flex items-center">
           <div className="flex-shrink-0">
             <div className={`w-8 h-8 ${color} rounded-md flex items-center justify-center`}>
-              <Icon className="w-5 h-5 text-white" />
+              <IconElement className="w-5 h-5 text-white" />
             </div>
           </div>
           <div className="mr-5 w-0 flex-1">

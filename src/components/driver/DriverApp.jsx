@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { 
   MapPin, 
   Navigation, 
@@ -36,9 +36,9 @@ import {
 const DriverApp = () => {
   const [currentView, setCurrentView] = useState('dashboard')
   const [isOnline, setIsOnline] = useState(true)
-  const [currentLocation, setCurrentLocation] = useState('الرياض، حي النخيل')
-  const [batteryLevel, setBatteryLevel] = useState(85)
-  const [signalStrength, setSignalStrength] = useState(4)
+  const [currentLocation] = useState('الرياض، حي النخيل')
+  const [batteryLevel] = useState(85)
+  const [signalStrength] = useState(4)
 
   // إحصائيات السائق
   const driverStats = [

@@ -28,10 +28,10 @@ import { NoUsers, NoSearchResults } from '../ui/empty-states'
 import { useToast } from '../ui/notifications'
 
 const MembershipManagement = () => {
-  const [loading, setLoading] = useState(false)
+  const [loading] = useState(false)
   const [searchTerm, setSearchTerm] = useState('')
   const [filterStatus, setFilterStatus] = useState('all')
-  const [selectedMembers, setSelectedMembers] = useState([])
+  const [_selectedMembers] = useState([])
   const { toast } = useToast()
 
   // Mock members data
@@ -159,7 +159,7 @@ const MembershipManagement = () => {
     monthlyRevenue: members.filter(m => m.paymentStatus === 'paid').reduce((sum, m) => sum + m.monthlyFee, 0)
   }
 
-  const handleMemberAction = (action, memberId) => {
+  const handleMemberAction = (action) => {
     switch (action) {
       case 'activate':
         toast.success('تم تفعيل العضوية بنجاح')
