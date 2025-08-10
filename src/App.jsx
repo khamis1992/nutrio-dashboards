@@ -21,6 +21,7 @@ import RestaurantSettings from '@/components/restaurant/RestaurantSettings'
 import RestaurantProfile from '@/components/restaurant/RestaurantProfile'
 import RestaurantNotifications from '@/components/restaurant/RestaurantNotifications'
 import KitchenDisplay from '@/components/restaurant/KitchenDisplay'
+import RestaurantOrdersManagement from '@/components/restaurant/RestaurantOrdersManagement'
 import GymSettings from '@/components/gym/GymSettings'
 import GymProfile from '@/components/gym/GymProfile'
 import GymNotifications from '@/components/gym/GymNotifications'
@@ -44,6 +45,7 @@ function App() {
               <Route path="/admin/notifications" element={<AdminNotifications />} />
 
               <Route path="/restaurant" element={<RestaurantDashboard />} />
+              <Route path="/restaurant/orders" element={<RestaurantOrdersManagement />} />
               <Route path="/restaurant/kitchen" element={<KitchenDisplay />} />
               <Route path="/restaurant/settings" element={<RestaurantSettings />} />
               <Route path="/restaurant/profile" element={<RestaurantProfile />} />
