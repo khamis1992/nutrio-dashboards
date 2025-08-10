@@ -98,3 +98,11 @@ function App() {
 
 export default App
 
+// Import new user management pages
+import AllUsers from "@/components/admin/pages/users/AllUsers"
+import AddUser from "@/components/admin/pages/users/AddUser"
+import UserRoles from "@/components/admin/pages/users/UserRoles"
+import BlockedUsers from "@/components/admin/pages/users/BlockedUsers"
+              <Route path="/admin/users/add" element={<AddUser />} />
+              <Route path="/admin/users/roles" element={<UserRoles />} />
+              <Route path="/admin/users/blocked" element={<BlockedUsers />} />
