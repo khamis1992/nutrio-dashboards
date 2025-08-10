@@ -8,6 +8,7 @@ import { NotificationProvider } from './components/ui/notifications'
 // Import components
 import HomePage from './components/HomePage'
 import AdminDashboard from './components/admin/AdminDashboard'
+import UserManagement from './components/admin/UserManagement'
 import RestaurantDashboard from './components/restaurant/RestaurantDashboard'
 import GymDashboard from './components/gym/GymDashboard'
 import DriverApp from './components/driver/DriverApp'
@@ -35,6 +36,7 @@ function App() {
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/admin" element={<AdminDashboard />} />
+              <Route path="/admin/users" element={<UserManagement />} />
               <Route path="/admin/system-health" element={<SystemHealthDashboard />} />
               <Route path="/admin/analytics" element={<SystemAnalytics />} />
               <Route path="/admin/settings" element={<AdminSettings />} />
