@@ -29,6 +29,13 @@ import MemberCheckIn from '@/components/gym/MemberCheckIn'
 import MembersManagement from '@/components/gym/MembersManagement'
 import MemberDetails from '@/components/gym/MemberDetails'
 import ClassesManagement from '@/components/gym/ClassesManagement'
+import TrainersManagement from '@/components/gym/TrainersManagement'
+import EquipmentManagement from '@/components/gym/EquipmentManagement'
+import NutritionManagement from '@/components/gym/NutritionManagement'
+import ChallengesManagement from '@/components/gym/ChallengesManagement'
+import PaymentsManagement from '@/components/gym/PaymentsManagement'
+import AttendanceTracking from '@/components/gym/AttendanceTracking'
+import GymReports from '@/components/gym/GymReports'
 import NotFound from '@/components/NotFound'
 
 function App() {
@@ -58,6 +65,13 @@ function App() {
               <Route path="/gym/members" element={<MembersManagement />} />
               <Route path="/gym/members/:memberId" element={<MemberDetails />} />
               <Route path="/gym/classes" element={<ClassesManagement />} />
+              <Route path="/gym/trainers" element={<TrainersManagement />} />
+              <Route path="/gym/equipment" element={<EquipmentManagement />} />
+              <Route path="/gym/nutrition" element={<NutritionManagement />} />
+              <Route path="/gym/challenges" element={<ChallengesManagement />} />
+              <Route path="/gym/payments" element={<PaymentsManagement />} />
+              <Route path="/gym/attendance" element={<AttendanceTracking />} />
+              <Route path="/gym/reports" element={<GymReports />} />
               <Route path="/gym/checkin" element={<MemberCheckIn />} />
               <Route path="/gym/settings" element={<GymSettings />} />
               <Route path="/gym/profile" element={<GymProfile />} />
