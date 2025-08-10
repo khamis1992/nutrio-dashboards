@@ -98,7 +98,7 @@ const RestaurantSidebar = ({ isCollapsed, setIsCollapsed }) => {
       title: 'إدارة المخزون',
       icon: Package,
       submenu: [
-        { title: 'المواد الخام', path: '/restaurant/inventory/ingredients' },
+        { title: 'المواد الخام', path: '/restaurant/inventory' },
         { title: 'إضافة مادة خام', path: '/restaurant/inventory/add' },
         { title: 'تنبيهات النفاد', path: '/restaurant/inventory/alerts' },
         { title: 'طلبات الشراء', path: '/restaurant/inventory/purchase' },
