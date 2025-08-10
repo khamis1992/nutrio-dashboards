@@ -17,10 +17,13 @@ import SystemAnalytics from '@/components/admin/SystemAnalytics'
 import AdminSettings from '@/components/admin/AdminSettings'
 import AdminProfile from '@/components/admin/AdminProfile'
 import AdminNotifications from '@/components/admin/AdminNotifications'
-import RestaurantManagement from '@/components/admin/RestaurantManagement'
-import GymManagement from '@/components/admin/GymManagement'
-import DriversManagement from '@/components/admin/DriversManagement'
-import OrdersOverview from '@/components/admin/OrdersOverview'
+import RestaurantManagement from './components/admin/RestaurantManagement'
+import GymManagement from './components/admin/GymManagement'
+import DriversManagement from './components/admin/DriversManagement'
+import OrdersOverview from './components/admin/OrdersOverview'
+import PaymentsManagement from './components/admin/PaymentsManagement'
+import NotificationsCenter from './components/admin/NotificationsCenter'
+import SupportManagement from './components/admin/SupportManagement'
 import RestaurantSettings from '@/components/restaurant/RestaurantSettings'
 import RestaurantProfile from '@/components/restaurant/RestaurantProfile'
 import RestaurantNotifications from '@/components/restaurant/RestaurantNotifications'
@@ -34,6 +37,7 @@ import MembersManagement from '@/components/gym/MembersManagement'
 import MemberDetails from '@/components/gym/MemberDetails'
 import ClassesManagement from '@/components/gym/ClassesManagement'
 import NotFound from '@/components/NotFound'
+import AdvancedAnalytics from './components/admin/AdvancedAnalytics'
 
 function App() {
   return (
@@ -49,6 +53,10 @@ function App() {
               <Route path="/admin/gyms" element={<GymManagement />} />
               <Route path="/admin/drivers" element={<DriversManagement />} />
               <Route path="/admin/orders" element={<OrdersOverview />} />
+              <Route path="/admin/payments" element={<PaymentsManagement />} />
+              <Route path="/admin/notifications" element={<NotificationsCenter />} />
+              <Route path="/admin/support" element={<SupportManagement />} />
+              <Route path="/admin/advanced-analytics" element={<AdvancedAnalytics />} />
               <Route path="/admin/system-health" element={<SystemHealthDashboard />} />
               <Route path="/admin/analytics" element={<SystemAnalytics />} />
               <Route path="/admin/settings" element={<AdminSettings />} />
