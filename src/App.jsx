@@ -24,6 +24,9 @@ import GymSettings from '@/components/gym/GymSettings'
 import GymProfile from '@/components/gym/GymProfile'
 import GymNotifications from '@/components/gym/GymNotifications'
 import MemberCheckIn from '@/components/gym/MemberCheckIn'
+import MembersManagement from '@/components/gym/MembersManagement'
+import MemberDetails from '@/components/gym/MemberDetails'
+import ClassesManagement from '@/components/gym/ClassesManagement'
 import NotFound from '@/components/NotFound'
 
 function App() {
@@ -48,6 +51,9 @@ function App() {
               <Route path="/restaurant/notifications" element={<RestaurantNotifications />} />
 
               <Route path="/gym" element={<GymDashboard />} />
+              <Route path="/gym/members" element={<MembersManagement />} />
+              <Route path="/gym/members/:memberId" element={<MemberDetails />} />
+              <Route path="/gym/classes" element={<ClassesManagement />} />
               <Route path="/gym/checkin" element={<MemberCheckIn />} />
               <Route path="/gym/settings" element={<GymSettings />} />
               <Route path="/gym/profile" element={<GymProfile />} />
