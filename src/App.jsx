@@ -29,6 +29,7 @@ import MemberCheckIn from '@/components/gym/MemberCheckIn'
 import MembersManagement from '@/components/gym/MembersManagement'
 import MemberDetails from '@/components/gym/MemberDetails'
 import ClassesManagement from '@/components/gym/ClassesManagement'
+import TrainersManagement from '@/components/gym/TrainersManagement'
 import NotFound from '@/components/NotFound'
 
 function App() {
@@ -58,6 +59,7 @@ function App() {
               <Route path="/gym/members" element={<MembersManagement />} />
               <Route path="/gym/members/:memberId" element={<MemberDetails />} />
               <Route path="/gym/classes" element={<ClassesManagement />} />
+              <Route path="/gym/trainers" element={<TrainersManagement />} />
               <Route path="/gym/checkin" element={<MemberCheckIn />} />
               <Route path="/gym/settings" element={<GymSettings />} />
               <Route path="/gym/profile" element={<GymProfile />} />
